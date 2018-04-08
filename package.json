@@ -1,11 +1,11 @@
 {
   "name": "rn-gn-buttonloading",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Button loading animation ",
   "main": "ButtonLoading.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/giaynhap/rn-gn-buttonloading.git"
+    "url": "git+https://github.com/giaynhap/rn-gn-buttonloading.git"
   },
   "keywords": [
     "react",
@@ -18,7 +18,8 @@
     "android",
     "react-component"
   ],
-  "author": "GiayNhap email: giaynhapcoder@gmail.com",
+  "author": "Giay Nhap",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/giaynhap/rn-gn-buttonloading/issues"
   },

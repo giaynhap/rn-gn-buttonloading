@@ -1,0 +1,26 @@
+{
+  "name": "rn-gn-buttonloading",
+  "version": "1.0",
+  "description": "Button loading animation ",
+  "main": "ButtonLoading.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/giaynhap/rn-gn-buttonloading.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "react-native",
+    "button",
+    "loading",
+    "animation",
+    "ios",
+    "android",
+    "react-component"
+  ],
+  "author": "GiayNhap email: giaynhapcoder@gmail.com",
+  "bugs": {
+    "url": "https://github.com/giaynhap/rn-gn-buttonloading/issues"
+  },
+  "homepage": "https://github.com/giaynhap/rn-gn-buttonloading#readme"
+}

@@ -28,3 +28,6 @@ import ButtonLoading from 'rn-gn-buttonloading'
         
         size= {40} style= {{color:'white'}} title="HelloWorld" />
  ```
+# ScreenShoot
+
+![Demo](https://raw.githubusercontent.com/giaynhap/rn-gn-buttonloading/master/gif.gif)

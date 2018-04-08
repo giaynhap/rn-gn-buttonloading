@@ -7,25 +7,17 @@ import {
   Text,
   View
 } from 'react-native';
-import ButtonLoading from './ButtonLoading'
-import Realm from 'realm';
- 
+import ButtonLoading from 'rn-gn-buttonloading'
+
 type Props = {};
 export default class App extends Component<Props> {
-  componentWillMount() {
-    Realm.open({
-      schema: [{name: 'Dog', properties: {name: 'string'}}]
-    }).then(realm => {
-      realm.write(() => {
-        realm.create('Dog', {name: 'Rex'});
-      });
-      this.setState({ realm });
-    });
-  }
+  
 
   render() {
     return (
       <View style={styles.container}>
+
+      
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>

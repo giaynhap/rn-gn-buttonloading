@@ -1,6 +1,6 @@
 {
   "name": "rn-gn-buttonloading",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Button loading animation ",
   "main": "ButtonLoading.js",
   "repository": {

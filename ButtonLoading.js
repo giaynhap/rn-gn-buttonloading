@@ -6,6 +6,7 @@ import {
   Text,
   View,
   Animated,
+  Platform,
   TouchableWithoutFeedback ,ActivityIndicator
 } from 'react-native';
  
@@ -97,8 +98,8 @@ export default class ButtonLoading extends Component<Props> {
       <Animated.View style={{opacity:this.state.alpha2}}>
           <Text style={[styles.textStyle,this.props.textstyle]}>{this.props.title}</Text>
      </Animated.View>
-      <Animated.View style={{opacity:this.state.alpha,position: 'absolute', translateY: 0, }}>
-      <ActivityIndicator size={size-2} color={acIndi_col} />
+      <Animated.View style={{opacity:this.state.alpha,position: 'absolute' }}>
+      <ActivityIndicator size={ Platform.OS === 'ios' ?0:(size-2)} color={acIndi_col} />
       </Animated.View>
       
      </Animated.View>

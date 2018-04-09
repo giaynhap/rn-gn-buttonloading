@@ -18,11 +18,13 @@ export default class ButtonLoading extends Component<Props> {
   constructor(props)
   {
       super(props);
+      var border = this.props.borderRadius||this.props.size||30;
       this.state = {
           width:200,
           layout: new Animated.Value(1),
           alpha: new Animated.Value(0.0),
-          alpha2: new Animated.Value(1.0)
+          alpha2: new Animated.Value(1.0),
+          border: new Animated.Value(border)
       }
       this.state.layout.addListener(({value}) => {this._value = value;console.log( value)});
   }
@@ -41,7 +43,10 @@ export default class ButtonLoading extends Component<Props> {
     Animated.timing(
         this.state.layout, {
         toValue: size
-    }),
+    }), Animated.timing(
+      this.state.border, {
+      toValue:size
+  }),
     Animated.timing(
         this.state.alpha, {
         toValue: 1.0,
@@ -65,6 +70,10 @@ export default class ButtonLoading extends Component<Props> {
             toValue: this.state.width
         }),
         Animated.timing(
+          this.state.border, {
+          toValue: this.props.borderRadius||this.props.size||30
+      }),
+        Animated.timing(
             this.state.alpha, {
             toValue: 0.0,
             delay: 0
@@ -84,7 +93,7 @@ export default class ButtonLoading extends Component<Props> {
       if (this.props.loadingColor!=null) acIndi_col = this.props.loadingColor;
     return (<View onLayout = {(e)=>this.onLayout(e)}style={[styles.button,{height:size}]}>
       <TouchableWithoutFeedback onPress={()=>this.onPress(size)}>
-      <Animated.View   style={[styles.bgStyle,this.props.background,{width:  this.state.layout, height: size }]}>
+      <Animated.View   style={[styles.bgStyle,this.props.background,{width:  this.state.layout, height: size,borderRadius: this.state.border }]}>
       <Animated.View style={{opacity:this.state.alpha2}}>
           <Text style={[styles.textStyle,this.props.textstyle]}>{this.props.title}</Text>
      </Animated.View>
@@ -110,8 +119,7 @@ const styles = StyleSheet.create({
   bgStyle:{
    
     backgroundColor:'gray',
-    justifyContent:'center',
-    borderRadius:100
+    justifyContent:'center'
   },
   button: {
     width:"100%",
